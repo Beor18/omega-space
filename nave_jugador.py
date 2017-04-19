@@ -22,9 +22,12 @@ class NaveJugador (pygame.sprite.Sprite):
 			# print "Abajo"
 			# self.rect.y += self.velocidady
 		if teclado [pygame.K_LEFT]:
+			if self.rect.x + self.rect.width >= 2:
+				self.rect.x -= self.velocidadx
 			print "Izquierda"
 			self.rect.x -= self.velocidadx
 		if teclado [pygame.K_RIGHT]:
-			
+			if self.rect.x + self.rect.width >= 2:
+				self.rect.x += self.velocidadx
 			print "Derecha"
 			self.rect.x += self.velocidady
